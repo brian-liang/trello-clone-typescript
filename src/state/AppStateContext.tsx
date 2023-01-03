@@ -59,3 +59,7 @@ export const AppStateProvider: FC<{ children: React.ReactNode }> = ({
     </AppStateContext.Provider>
   );
 };
+
+export const useAppState = () => {
+  return useContext(AppStateContext);
+};
