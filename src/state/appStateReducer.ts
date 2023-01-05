@@ -1,4 +1,5 @@
 import { Action } from "./actions";
+import { nanoid } from "nanoid";
 
 export type Task = {
   id: string;
@@ -20,5 +21,13 @@ export const appStateReducer = (
   action: Action,
 ): AppState | void => {
   switch (action.type) {
+    case "ADD_LIST": {
+      draft.lists.push({
+        id: nanoid(),
+        text: action.payload,
+        tasks: [],
+      });
+      break;
+    }
   }
 };
