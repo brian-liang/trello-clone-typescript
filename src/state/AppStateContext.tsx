@@ -51,7 +51,7 @@ const AppStateContext = createContext<AppStateContextProps>(
 export const AppStateProvider: FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  const [state, dispath] = useImmerReducer(appStateReducer, appData);
+  const [state, dispatch] = useImmerReducer(appStateReducer, appData);
   const { lists } = state;
 
   const getTasksByListId = (id: string) => {
@@ -59,7 +59,7 @@ export const AppStateProvider: FC<{ children: React.ReactNode }> = ({
   };
 
   return (
-    <AppStateContext.Provider value={{ lists, getTasksByListId, dispath }}>
+    <AppStateContext.Provider value={{ lists, getTasksByListId, dispatch }}>
       {children}
     </AppStateContext.Provider>
   );
