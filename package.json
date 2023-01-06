@@ -1,4 +1,5 @@
 {
+  "homepage": "https://brian-liang.github.io/trello-clone-typescript",
   "name": "trello-clone",
   "version": "0.1.0",
   "private": true,
@@ -24,7 +25,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint .",
-    "lint:fix": "eslint --fix ."
+    "lint:fix": "eslint --fix .",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -61,6 +64,7 @@
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "gh-pages": "^4.0.0",
     "prettier": "^2.8.1",
     "typescript": "^4.9.4"
   }
