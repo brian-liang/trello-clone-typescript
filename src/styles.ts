@@ -11,7 +11,7 @@ export const AppContainer = styled.div`
 `;
 
 export const ColumnContainer = styled.div`
-  backgournd-color: #ebecf0;
+  background-color: #ebecf0;
   width: 300px;
   min-height: 40px;
   margin-right: 20px;
